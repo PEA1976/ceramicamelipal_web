@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Cerámica Melipal — piezas artesanales hechas a mano desde hace 20 años." />
+  <title>Cerámica Melipal | Hecho a mano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#inicio" aria-label="Cerámica Melipal, inicio">
+      <img class="brand-logo" src="https://dcdn-us.mitiendanube.com/stores/007/417/659/themes/common/logo-1732130508996480366-1779661894-f9e8f1793321ba7427f806a93df994ec1779661894-480-0.webp" alt=""><span>cerámica<br><strong>melipal</strong></span>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#productos">Tienda</a><a href="#nosotros">Nosotros</a><a href="#mayoristas">Mayoristas</a>
+    </nav>
+    <button class="cart-button" id="open-cart" aria-label="Abrir carrito">Carrito <span id="cart-count">0</span></button>
+  </header>
+  <div class="announcement" aria-label="Promoción mayorista"><div class="announcement-track">HECHO A MANO <span>✦</span> PRECIOS ESPECIALES PARA COMPRAS POR MAYOR <span>✦</span> HECHO A MANO <span>✦</span> PRECIOS ESPECIALES PARA COMPRAS POR MAYOR <span>✦</span> HECHO A MANO <span>✦</span> PRECIOS ESPECIALES PARA COMPRAS POR MAYOR <span>✦</span> HECHO A MANO <span>✦</span> PRECIOS ESPECIALES PARA COMPRAS POR MAYOR <span>✦</span></div></div>
+
+  <main id="inicio">
+    <section class="shop-section" id="productos">
+      <div class="section-heading"><div><p class="eyebrow">NUESTRAS COLECCIONES</p></div><div class="filters" role="group" aria-label="Filtrar productos"><button class="active" data-filter="todos">Todo</button><button data-filter="rustica">Línea Rústica</button><button data-filter="cristal">Línea Cristal</button></div></div>
+      <div class="products" id="product-grid"></div>
+    </section>
+
+    <section class="story" id="nosotros">
+      <div class="story-copy"><p class="eyebrow">CERÁMICA MELIPAL</p><h2>Veinte años con las manos en la tierra.</h2><p>Somos Cerámica Melipal. Desde hace veinte años transformamos la arcilla en objetos cotidianos, durables y llenos de carácter.</p><p>Trabajamos en pequeñas tandas, respetando los tiempos de cada proceso. Nuestra línea Rústica es la esencia del taller; la línea Cristal, nuestra nueva exploración de color y luz.</p></div>
+    </section>
+
+    <section class="wholesale" id="mayoristas"><div><p class="eyebrow">PARA NEGOCIOS</p><h2>¿Tenés un local?</h2><p>Abastecemos tiendas, proyectos gastronómicos y espacios que valoran lo hecho a mano. Pedinos nuestro catálogo mayorista.</p><p class="wholesale-shipping">Hacemos envíos a todo el país.</p></div><a class="button button-light" href="https://wa.me/541131794620?text=Hola%20Cer%C3%A1mica%20Melipal%2C%20quiero%20consultar%20por%20ventas%20mayoristas." target="_blank" rel="noopener">Quiero vender Melipal <span>↗</span></a></section>
+  </main>
+  <aside class="cart-panel" id="cart-panel" aria-label="Tu carrito" aria-hidden="true">
+    <div class="cart-head"><h2>Tu carrito <span id="cart-count-title">0</span></h2><button class="close" id="close-cart" aria-label="Cerrar">×</button></div>
+    <div id="cart-items" class="cart-items"><p class="empty">Tu carrito todavía está vacío.</p></div>
+    <div class="cart-bottom"><div class="total"><span>Total estimado</span><strong id="cart-total">$0</strong></div><button class="button button-dark checkout" id="checkout">Finalizar pedido <span>→</span></button><p class="checkout-note">Coordinamos disponibilidad, entrega y pago por WhatsApp.</p></div>
+  </aside><div class="overlay" id="overlay"></div>
+
+  <dialog id="order-dialog"><button class="dialog-close" id="dialog-close" aria-label="Cerrar">×</button><p class="eyebrow">CASI LISTO</p><h2>¿Cómo te contactamos?</h2><p class="dialog-intro">Recibiremos tu pedido por correo y te escribiremos para confirmar stock, plazo de entrega y pago.</p><form id="order-form"><label>Nombre y apellido<input required name="nombre" autocomplete="name" placeholder="Tu nombre" /></label><label>WhatsApp<input required name="whatsapp" type="tel" autocomplete="tel" placeholder="Ej. 11 1234 5678" /></label><label>Email <span>(opcional)</span><input name="email" type="email" autocomplete="email" placeholder="tu@email.com" /></label><label>Notas para el pedido <textarea name="notas" placeholder="Color, cantidad, consulta…"></textarea></label><button class="button button-dark" type="submit">Enviar pedido <span>↗</span></button></form></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
